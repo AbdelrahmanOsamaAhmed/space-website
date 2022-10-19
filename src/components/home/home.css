@@ -1,0 +1,43 @@
+#explore-btn {
+  height: 17.125rem;
+  width: 17.125rem;
+  border-radius: 50%;
+  border: none;
+  transition: 0.25s ease-in-out;
+  /* margin-left: 3rem; */
+}
+#explore-btn:hover {
+  transform: scale(1.07);
+}
+.container-1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.bgtall {
+  background-image: url("../../img/home.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: cover;
+  display: flex;
+  color: #fff;
+  height: 100vh;
+
+}
+@media screen and (min-device-width: 148px) and (max-device-width: 1900px) { 
+  .bgtall {
+    background-image: url("../../img/background-home-tablet.jpg");
+    overflow: scroll;
+  }
+  #explore-btn{
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-device-width: 147px) {
+  .bgtall {
+    background-image: url("../../img/background-home-mobile.jpg");
+    overflow: scroll;
+  }
+}
