@@ -1,6 +1,7 @@
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function Navagationbar() {
   const items = [
@@ -8,12 +9,26 @@ export default function Navagationbar() {
     { text: "01 DESTINATION", to: "/destination" },
     { text: "02 CREW", to: "/crew" },
   ];
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.pageYOffset > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("touchmove", onScroll);
+    return () => window.removeEventListener("touchmove", onScroll);
+  }, []);
   return (
     <Navbar
       expand="lg"
+      bg={scrolled ? "dark" : ""}
       variant="dark"
       style={{
-        position: "absolute",
+        position: "fixed",
         zIndex: "100",
         width: "100%",
       }}

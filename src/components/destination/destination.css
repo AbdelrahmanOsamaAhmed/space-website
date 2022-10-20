@@ -29,7 +29,7 @@
 @media screen and (min-device-width: 148px) and (max-device-width: 1900px) {
   .destination-bg {
     background-image: url("../../img/background-destination-tablet.jpg");
-    overflow: scroll;
+    height: 100%;
     padding: 50px;
   }
 
