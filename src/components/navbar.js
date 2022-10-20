@@ -22,6 +22,17 @@ export default function Navagationbar() {
     window.addEventListener("touchmove", onScroll);
     return () => window.removeEventListener("touchmove", onScroll);
   }, []);
+    useEffect(() => {
+    const onScroll = () => {
+      if (window.pageYOffset > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   return (
     <Navbar
       expand="lg"
