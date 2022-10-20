@@ -1,0 +1,48 @@
+#explore-btn {
+  height: 17.125rem;
+  width: 17.125rem;
+  border-radius: 50%;
+  border: none;
+  transition: 0.25s ease-in-out;
+  /* margin-left: 3rem; */
+}
+#explore-btn:hover {
+  transform: scale(1.07);
+}
+.container-1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.space{
+  width: 40%;
+}
+.bgtall {
+  background-image: url("../../img/home.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: cover;
+  display: flex;
+  color: #fff;
+  height: 100vh;
+
+}
+@media screen and (min-device-width: 148px) and (max-device-width: 1900px) { 
+  .bgtall {
+    background-image: url("../../img/background-home-tablet.jpg");
+    height: 100%;
+  }
+  #explore-btn{
+    margin-bottom: 50px;
+  }
+  .space{
+    width: 100%;
+  }
+  .sp{
+    padding: 3rem !important;
+    margin-top: 200px !important;
+  }
+}
+

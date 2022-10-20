@@ -1,0 +1,30 @@
+#crew-pic {
+  bottom: 0;
+}
+#crew-bg {
+  background-image: url("../../img/background-crew-desktop.jpg");
+  padding-bottom: 0;
+}
+.crew-name{
+  font-size: 72px;
+}
+
+@media screen and (max-device-width: 600px) {
+  #destination-pic {
+    height: 400px;
+  }
+  #crew-container {
+    height: 100%;
+    background-attachment: fixed;
+  }
+  #crew-bg {
+    background-image: url("../../img/background-crew-tablet.jpg");
+  }
+  #crew-pic{
+    width: 100%;
+  }
+  .crew-name{
+    font-size: 40px;
+  }
+
+}
